@@ -1,0 +1,42 @@
+# === C-Build ===
+*.o
+*.exe
+*.out
+*.a
+*.so
+*.dll
+*.dSYM/
+
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# === Virtualenv ===
+venv/
+ENV/
+env/
+.venv/
+
+# === Flask uploads & outputs ===
+webapp/static/*.png
+webapp/static/*.jpg
+webapp/static/*.jpeg
+/webapp/Lib/*
+/webapp/Scripts/*
+
+# === Editor & OS Dateien ===
+.DS_Store
+Thumbs.db
+*.swp
+
+# === VSCode ===
+.vscode/
+
+# === JetBrains IDEs ===
+.idea/
+*.iml
+
+

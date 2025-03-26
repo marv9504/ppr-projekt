@@ -1,0 +1,15 @@
+Prozess: 
+
+1. Kantenerkennung
+- Kanten wurden gut erkannt, daraus soll dann eine Maske abgeleitet werden
+2. Maskenfüllung 
+- Aus einer Kantenmaske (Edge Map) eine Binärmaske erzeugen, die die Personen grob als weiße Silhouetten markiert (255 = Person, 0 = Hintergrund).
+- Problem? Wie füllen wir große Bereiche, die von Linien "Umgeben" sind
+-> Ergebnisse zu ungenau, anderer Ansatz für Maske
+2a) Farbbasierte Erkennung, wir schauen welche Farbe die größten Anteil im Bild macht (einfarbiger Hintergrund)
+-> maskieren, invertieren
+-> Ergebnisse gut, je nach Bild muss mit der Tolerance gespielt werden
+3. Anwenden von Filtern auf den Maskierten Bereich
+-> SW Filter (Lammbockfilter)
+
+
