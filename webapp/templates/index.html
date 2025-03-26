@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lammbock Filter</title>
+    <style>
+        .images {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .images img {
+            max-width: 45%;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lammbock Bildfilter</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required><br><br>
+
+        <label for="tol">Toleranz: <span id="tolValue">30</span>%</label><br>
+        <input type="range" name="tolerance" id="tol" min="0" max="100" value="30"
+               oninput="document.getElementById('tolValue').innerText = this.value"><br><br>
+
+        <button type="submit">Anwenden</button>
+    </form>
+
+    {% if result %}
+        <div class="images">
+            <div>
+                <h3>Original</h3>
+                <img src="{{ original }}" alt="Originalbild">
+            </div>
+            <div>
+                <h3>Gefiltert</h3>
+                <img src="{{ result }}" alt="Ergebnisbild">
+            </div>
+        </div>
+    {% endif %}
+</body>
+</html>
