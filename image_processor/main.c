@@ -115,7 +115,11 @@ int main(int argc, char *argv[]) {
 
     double end = omp_get_wtime();
 
-    stbi_write_png(argv[2], w, h, 3, output, w * 3);
+    // int success = stbi_write_png(argv[2], w, h, 3, output, w * 3);
+    int success = stbi_write_png("../webapp/static/output.png", w, h, 3, output, w * 3);
+    if (!success) {
+        printf("Fehler beim Speichern des Bildes!\n");
+    }
 
     stbi_image_free(input);
     free(mask);

@@ -55,6 +55,19 @@ Beispiel:
 ./lammbock.exe assets/img_1.jpg webapp/static/output.png 30
 ```
 
+### Benchmark: Verarbeitungszeit und Speedup pro Thread-Anzahl
+
+| Threads | Zeit (s) | Speedup |
+|---------|----------|---------|
+| 1       | 0.20670  | 1.00    |
+| 2       | 0.12485  | 1.66    |
+| 3       | 0.09890  | 2.09    |
+| 4       | 0.07934  | 2.61    |
+| 5       | 0.07288  | 2.83    |
+| 6       | 0.07034  | 2.94    |
+| 7       | 0.06931  | 2.98    |
+| 8       | 0.06890  | 3.00    |
+
 ---
 
 ## 🌐 Web-Oberfläche starten
